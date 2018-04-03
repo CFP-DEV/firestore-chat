@@ -106,7 +106,7 @@ class Rooms extends Component {
 
 const mapStateToProps = (state) => {
   const { rooms, auth } = state;
-  const isLoaded = rooms.isFetched && rooms.isFetching;
+  const isLoaded = rooms.isFetched && !rooms.isFetching;
 
   return {
     isLoaded: isLoaded,

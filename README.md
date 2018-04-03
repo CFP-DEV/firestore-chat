@@ -1,4 +1,5 @@
 # Firestore Chat
+You can find working demo [HERE](http://chat.cfp-dev.com/auth/login).
 
 ## Installation
 To make it work you have to enable email/password auth in your firestore application and create configuration file with the example I've showed you below.
