@@ -1,0 +1,102 @@
+.room-preview {
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr 120px;
+  grid-gap: 20px 0;
+
+  .section-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .message-list {
+    display: grid;
+    grid-auto-rows: min-content;
+    grid-gap: 20px 0;
+    overflow-y: scroll;
+  
+    .message {
+      display: grid;
+      grid-template-columns: 40px minmax(min-content, max-content);
+      grid-template-rows: auto 40px;
+      grid-gap: 0 20px;
+
+      &__avatar {
+        height: 40px;
+        width: 40px;
+        background: $dark;
+        border-radius: 50%;
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        font-size: 14px;
+        color: $white;
+        grid-row-start: 1;
+        grid-row-end: 3; 
+      }
+
+      &__content {
+        & > div {
+          background: $white;
+          padding: 10px;
+          font-size: 14px;
+          line-height: 24px;
+          line-break: auto;
+          border-radius: $border-radius;
+        }
+      }
+
+      &__footer {
+        font-size: 12px;
+        line-height: 40px;
+        color: $gray;
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-between;
+        grid-gap: 0 10px;
+
+        &__menu {
+          display: flex;
+
+          .btn {
+            height: 40px;
+            margin-left: 10px;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &:hover {
+              color: $dark;
+            }
+          }
+        }
+      } 
+    }
+
+    .message--reverse {
+      grid-template-columns: minmax(min-content, max-content) 40px;
+      justify-self: right;
+
+      .message__avatar {
+        grid-column: 2;
+      }
+    }
+  }
+
+  .new-message {
+    display: grid;
+    grid-template-columns: 1fr 120px;
+    grid-template-rows: 120px;
+    grid-gap: 0 20px;
+
+    &__content, &__submit {
+      height: auto;
+    }
+
+    &__submit {
+      font-size: 24px;
+    }
+  }
+}

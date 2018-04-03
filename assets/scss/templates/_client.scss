@@ -1,0 +1,64 @@
+.client {
+  display: grid;
+  grid-template-rows: 100vh;
+  grid-template-columns: 120px 1fr;
+
+  .navigation {
+    display: grid;
+    grid-template-rows: 120px 1fr 120px;
+    background: $white;
+    //box-shadow: 0 0 40px rgba(0, 0, 0, 0.05);
+
+    .navigation-logo, .navigation-menu, .navigation-profile {
+      display: grid;
+      justify-items: center;
+    }
+
+    .navigation-logo, .navigation-profile {
+      align-items: center;
+    }
+
+    .navigation-logo {
+      background: $red;
+      color: $white;
+    }
+
+    // FIXME: TEST THIS
+    .navigation-menu {
+      display: grid;
+      grid-template-columns: 120px;
+      grid-template-rows: repeat(auto-fit, 60px);
+      grid-gap: 20px 0;
+      align-items: center;
+      padding: 20px 0;
+
+      .room {
+        height: 60px;
+        width: 60px;
+        background: $gray-light;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+          background: $red;
+          color: $white;
+        }
+      }
+
+      .room--add-new {
+        font-size: 12px;
+      }
+    }
+
+    .navigation-profile {
+      border-top: 1px solid $gray-light;
+    }
+  }
+
+  &__content {
+    padding: 40px;
+    background: $gray-light;
+  }
+}

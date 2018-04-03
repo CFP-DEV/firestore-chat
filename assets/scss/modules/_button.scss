@@ -1,0 +1,58 @@
+.btn {
+  cursor: pointer;
+  -webkit-transition: 0.2s;
+  -moz-transition: 0.2s;
+  -o-transition: 0.2;
+  transition: 0.2s;
+
+  &:hover {
+    cursor: pointer;
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2;
+    transition: 0.2s;
+  }
+}
+
+.btn--reset {
+  background: none;
+  outline: 0;
+  border: none;
+  color: inherit;
+  font: inherit;
+}
+
+.btn--primary, .btn--outline-primary, .btn--disabled {
+  height: 50px;
+  width: auto;
+  padding: 0 20px;
+  border-radius: $border-radius;
+  font-size: 12px;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+}
+
+.btn--primary {
+  background: $red;
+  color: $white;
+
+  &:hover {
+    background: darken($red, 5%);
+  }
+}
+
+.btn--outline-primary {
+  border: 1px solid $gray;
+
+  &:hover {
+    background: $red;
+    color: $white;
+    border-color: $red;
+  }
+}
+
+.btn--disabled {
+  background: $gray;
+  color: $dark;
+}

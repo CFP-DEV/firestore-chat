@@ -1,0 +1,56 @@
+.form {
+  .form-group {
+    margin-bottom: 20px;
+  }
+
+  label {
+    font-size: 12px;
+    line-height: 30px;
+  }
+
+  input, textarea {
+    height: 50px;
+    width: 100%;
+    padding: 0 10px;
+    background: transparent;
+    border: 1px solid $gray;
+    border-radius: $border-radius;
+    font-size: 14px;
+    font-family: inherit;
+  }
+
+  textarea {
+    line-height: 24px;
+    resize: none;
+    padding: 10px;
+  }
+
+  .form__instruction, .form__link, .form__message {
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .form__instruction, .form__link {
+    color: $gray;
+  }
+
+  .form__link {
+    -webkit-transition: 0.2s;
+    -moz-transition: 0.2s;
+    -o-transition: 0.2;
+    transition: 0.2s;
+
+    &:hover {
+      -webkit-transition: 0.2s;
+      -moz-transition: 0.2s;
+      -o-transition: 0.2;
+      transition: 0.2s;
+      color: $dark;
+    }
+  }
+
+  .form__message {
+    color: $red;
+    margin-top: 10px;
+  }
+}

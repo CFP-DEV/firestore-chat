@@ -1,0 +1,45 @@
+.auth {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 100vh;
+  position: relative;
+
+  .auth-menu {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 12px;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+
+    span {
+      margin-right: 20px;
+    }
+
+    a {
+      height: 40px;
+    }
+  }
+
+  .wrapper {
+    display: grid;
+    align-items: center;
+    max-width: 600px;
+  }
+
+  .auth-header {
+    margin-bottom: 20px;
+
+    &__title {
+      font-size: 24px;
+    }
+
+    &__subtitle {
+      font-size: 14px;
+      line-height: 18px;
+      color: $gray;
+      margin-top: 10px;
+    }
+  }
+}

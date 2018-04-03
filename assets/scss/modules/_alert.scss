@@ -1,0 +1,13 @@
+.alert {
+  width: 100%;
+  padding: 20px;
+  font-size: 12px;
+  line-height: 18px;
+  margin-bottom: 10px;
+  border-radius: $border-radius;
+}
+
+.alert--danger {
+  border: 1px solid $red;
+  color: $red;
+}
