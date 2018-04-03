@@ -13,6 +13,9 @@ import Client from '../client/index';
 // 404
 import NotFound from '../../pages/not-found/index';
 
+// Components
+import Loading from '../../components/Loading';
+
 class Main extends Component {
   componentDidMount() {
     const { authRefresh } = this.props;
@@ -24,11 +27,7 @@ class Main extends Component {
     const { isLoading } = this.props;
 
     if (isLoading) {
-      return (
-        <div>
-          Loading
-        </div>
-      );
+      return <Loading fullScreen={true} />;
     }
 
     return (

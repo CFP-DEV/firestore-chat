@@ -10,6 +10,7 @@ import { fetchMessages } from '../../store/actions/messages';
 // Components
 import MessageList from './component/MessageList';
 import CreateMessage from './component/CreateMessage';
+import Loading from '../../components/Loading';
 
 class RoomPreview extends Component {
   state = { edited: {}, messageContent: '', }
@@ -132,11 +133,7 @@ class RoomPreview extends Component {
     const { isLoaded } = this.props;
 
     if (!isLoaded) {
-      return (
-        <div>
-          Loading
-        </div>
-      );
+      return <Loading />;
     }
 
     const { room, messages, user } = this.props;
