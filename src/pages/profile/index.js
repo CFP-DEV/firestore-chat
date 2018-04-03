@@ -10,7 +10,6 @@ class Profile extends Component {
           <h1>Profile Page</h1>
           <p>Edit your profile informations.</p>
         </header>
-        
 
       </section>
     );
