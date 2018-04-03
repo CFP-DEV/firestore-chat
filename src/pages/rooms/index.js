@@ -8,6 +8,7 @@ import { fetchRooms } from '../../store/actions/rooms';
 
 // Components
 import Room from './components/Room';
+import Loading from '../../components/Loading';
 
 class Rooms extends Component {
   componentDidMount() {
@@ -33,6 +34,9 @@ class Rooms extends Component {
     const { isLoaded, rooms } = this.props;
 
     // TODO: Loading animation.
+    if (!isLoaded) {
+      return <Loading />
+    }
 
     if (this.props.location.pathname === '/rooms/joined') {
       return (
